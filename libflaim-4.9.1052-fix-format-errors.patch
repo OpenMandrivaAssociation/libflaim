@@ -1,0 +1,21 @@
+diff -Naur -x '*~' libflaim-4.9.1052/ftk/src/ftkprntf.cpp libflaim-4.9.1052-fix-format-errors//ftk/src/ftkprntf.cpp
+--- libflaim-4.9.1052/ftk/src/ftkprntf.cpp	2007-02-21 01:00:15.000000000 +0100
++++ libflaim-4.9.1052-fix-format-errors//ftk/src/ftkprntf.cpp	2010-08-27 16:34:10.000000000 +0200
+@@ -986,7 +986,7 @@
+ 	printfClient.outputChar( 0);
+ 	
+ #ifndef FLM_RING_ZERO_NLM
+-	fprintf( stdout, printfClient.getBufferPtr());
++	fprintf( stdout, "%s", printfClient.getBufferPtr());
+ #endif
+ 
+ 	return( iLen);
+@@ -1009,7 +1009,7 @@
+ 	printfClient.outputChar( 0);
+ 	
+ #ifndef FLM_RING_ZERO_NLM
+-	fprintf( stderr, printfClient.getBufferPtr());
++	fprintf( stderr, "%s", printfClient.getBufferPtr());
+ #endif
+ 
+ 	return( iLen);

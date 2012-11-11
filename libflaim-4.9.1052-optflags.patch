@@ -1,0 +1,12 @@
+diff -up libflaim-4.9.1052/flaim/Makefile~ libflaim-4.9.1052/flaim/Makefile
+--- libflaim-4.9.1052/flaim/Makefile~	2007-09-06 18:13:15.000000000 +0300
++++ libflaim-4.9.1052/flaim/Makefile	2009-05-10 17:09:08.000000000 +0300
+@@ -962,7 +962,7 @@ ifdef unix_target
+ 	endif
+ 
+ 	gcc_optimization_flags = \
+-		-O \
++		$(CXXFLAGS) \
+ 		-foptimize-sibling-calls \
+ 		-fstrength-reduce -fcse-follow-jumps \
+ 		-fcse-skip-blocks \

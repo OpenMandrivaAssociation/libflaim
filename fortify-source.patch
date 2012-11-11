@@ -1,0 +1,46 @@
+--- flaim/util/sharutil.h.orig	2008-03-24 19:52:35.000000000 +0000
++++ flaim/util/sharutil.h	2008-03-24 19:55:49.000000000 +0000
+@@ -28,6 +28,9 @@
+ 
+ #include "flaim.h"
+ 
++#include <stdio.h>
++#include <string.h>
++
+ #if defined( FLM_WIN)
+ 	// Conversion from XXX to YYY, possible loss of data
+ 	#pragma warning( disable : 4244) 
+--- flaim/util/dbshell.h.orig	2008-03-24 19:54:09.000000000 +0000
++++ flaim/util/dbshell.h	2008-03-24 19:56:13.000000000 +0000
+@@ -30,6 +30,9 @@
+ #include "flaimsys.h"
+ #include "sharutil.h"
+ 
++#include <stdio.h>
++#include <string.h>
++
+ // Types of clipboard data
+ 
+ enum eClipboardDataType
+--- flaim/util/flmunittest.h.orig	2008-03-24 19:56:35.000000000 +0000
++++ flaim/util/flmunittest.h	2008-03-24 19:58:21.000000000 +0000
+@@ -29,6 +29,7 @@
+ #include "flaimsys.h"
+ #ifndef FLM_NLM
+ 	#include <stdio.h>
++	#include <string.h>
+ #endif
+ 
+ // Status codes passed to recordUnitTestResults
+--- ftk/src/ftk.h.orig	2008-03-24 19:39:41.000000000 +0000
++++ ftk/src/ftk.h	2008-03-24 19:55:06.000000000 +0000
+@@ -28,6 +28,9 @@
+ #ifndef FTK_H
+ #define FTK_H
+ 
++#include <stdio.h>
++#include <string.h>
++
+ 	/// \defgroup retcodes Return Codes
+ 	
+ 	#ifndef FLM_PLATFORM_CONFIGURED
