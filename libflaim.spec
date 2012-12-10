@@ -6,17 +6,16 @@
 
 Name:		libflaim
 Version:	4.9.1052
-Release:	%mkrel 1
+Release:	2
 Summary:	Embeddable cross-platform database engine
 URL:		http://forge.novell.com/modules/xfmod/project/?flaim
 License:	GPLv2
 Group:		System/Libraries
-Source:		http://forgeftp.novell.com/flaim/development/flaim/downloads/source/%{name}-4.9.1052.tar.gz
+Source:		http://forgeftp.novell.com/flaim/development/flaim/downloads/source/%{name}-4.9.1052.tar
 Patch0:		fortify-source.patch
 Patch1:		%{name}-4.9.1052-optflags.patch
 Patch2:		%{name}-4.9.1052-fix-format-errors.patch
 BuildRequires:	ncurses-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 FLAIM is an embeddable cross-platform database engine that provides a
@@ -60,9 +59,7 @@ cd flaim/
 rm -rf %{buildroot}
 cd flaim/
 %make rpm_build_root=%{buildroot} lib_dir_name=%{_lib} install
-
-%clean
-rm -rf %{buildroot}
+rm -f %{buildroot}%{_libdir}/libflaim.a
 
 %files -n %{libname}
 %defattr(-,root,root)
@@ -71,9 +68,15 @@ rm -rf %{buildroot}
 
 %files -n %{develname}
 %defattr(-,root,root)
-%exclude %{_libdir}/libflaim.a
 %{_libdir}/libflaim.so
 %{_libdir}/pkgconfig/libflaim.pc
 %{_includedir}/flaim.h
 %{_includedir}/flaimtk.h
+
+
+
+%changelog
+* Fri Aug 27 2010 Guillaume Rousse <guillomovitch@mandriva.org> 4.9.1052-1mdv2011.0
++ Revision: 573472
+- import libflaim
 
