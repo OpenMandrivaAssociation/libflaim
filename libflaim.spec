@@ -9,7 +9,7 @@
 Summary:	Embeddable cross-platform database engine
 Name:		libflaim
 Version:	4.9.1052
-Release:	3
+Release:	4
 License:	GPLv2+
 Group:		System/Libraries
 Url:		http://forge.novell.com/modules/xfmod/project/?flaim
