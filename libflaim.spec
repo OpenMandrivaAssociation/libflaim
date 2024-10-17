@@ -12,7 +12,7 @@ Version:	4.9.1052
 Release:	4
 License:	GPLv2+
 Group:		System/Libraries
-Url:		http://forge.novell.com/modules/xfmod/project/?flaim
+Url:		https://forge.novell.com/modules/xfmod/project/?flaim
 Source0:	http://forgeftp.novell.com/flaim/development/flaim/downloads/source/%{name}-%{version}.tar
 Patch0:		fortify-source.patch
 Patch1:		%{name}-4.9.1052-optflags.patch
