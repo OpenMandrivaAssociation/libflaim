@@ -17,6 +17,7 @@ Source0:	http://forgeftp.novell.com/flaim/development/flaim/downloads/source/%{n
 Patch0:		fortify-source.patch
 Patch1:		%{name}-4.9.1052-optflags.patch
 Patch2:		%{name}-4.9.1052-fix-format-errors.patch
+BuildRequires:	make
 BuildRequires:	pkgconfig(ncurses)
 
 %description
